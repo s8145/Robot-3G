@@ -45,11 +45,13 @@ function draw(){
 		else {
 			$("#d3").css( { "background-color": "red" } );
 		}
+		$("#dane").html('<p>servo_1 detect: '+ dane + 'cm</p>');
 		paper.clear();	
-		var circle = paper.circle(robotHeadX+40, robotHeadY-dane, 8);
+		var circle = paper.circle(robotHeadX+40, robotHeadY-dane*3, 8);
 		circle.attr("fill", "blue");
 		circle.attr("stroke", "#fff");
 		draw();
+		
 	});
 
 	

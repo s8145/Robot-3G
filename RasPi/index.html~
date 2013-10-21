@@ -11,8 +11,7 @@
 		<script src="skrypt.js"></script>
 	</head>  
 	<body>
-			<div id="mapa"></div>
-			<div id="dane"></div>	
+			<div id="mapa"></div>	
 			<div id="drive">
 				<div id="a" class="button">A</div>
 				<div id="d" class="button">D</div>
