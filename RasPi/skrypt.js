@@ -17,7 +17,7 @@ function draw(){
 		liniePoziom.attr({stroke: 'white', 'stroke-width': 1});
 		liniePion.attr({stroke: 'white', 'stroke-width': 1});		
 	}
-	var robot = paper.path("M "+ robotX +" "+ robotY +" l 0 77 l 77 0 l 0 -77 z"); 
+	var robot = paper.path("M "+ robotX +" "+ robotY +" l 0 37 l 37 0 l 0 -37 z"); 
 	robot.attr({fill: '#B30000', stroke: 'green', 'stroke-width': 3}); 
 
 	var robotHead = paper.path("M "+ robotHeadX+" "+ robotHeadY +"  l 10 0 l 0 -7 l 0 7 l 20 0 l 0 -7 l 0 7 l 10 0");
