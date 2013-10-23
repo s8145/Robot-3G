@@ -6,8 +6,20 @@ $(document).ready(function () {
 
 	var rozmiar = 700;
 	var robotX = 301, robotY = 301;
-	var robotHeadX = 301+20, robotHeadY = 301-7;
-	var paper = Raphael(mapa, rozmiar, rozmiar);
+	var robotHeadX = robotX+10, robotHeadY = robotY-3;
+
+	var robotLIRX = robotX-3, robotLIRY = robotY+27;
+	var robotRIRX = robotX+41, robotRIRY = robotY+12;
+	var robotHIRX = robotX+13, robotHIRY = robotY-3;
+	
+
+
+
+var paper = Raphael(mapa, rozmiar, rozmiar);
+
+
+
+
 function draw(){	
 	var liniePoziom = paper.path("M 0 0 l "+ rozmiar +" 0 ");
 	var liniePion = paper.path("M 0 0 l 0 "+ rozmiar);  
@@ -17,11 +29,20 @@ function draw(){
 		liniePoziom.attr({stroke: 'white', 'stroke-width': 1});
 		liniePion.attr({stroke: 'white', 'stroke-width': 1});		
 	}
-	var robot = paper.path("M "+ robotX +" "+ robotY +" l 0 37 l 37 0 l 0 -37 z"); 
-	robot.attr({fill: '#B30000', stroke: 'green', 'stroke-width': 3}); 
+	var robot = paper.path("M "+ robotX +" "+ robotY +" l 0 38 l 38 0 l 0 -38 z"); 
+	robot.attr({fill: '#B30000', stroke: 'green', 'stroke-width': 2}); 
 
-	var robotHead = paper.path("M "+ robotHeadX+" "+ robotHeadY +"  l 10 0 l 0 -7 l 0 7 l 20 0 l 0 -7 l 0 7 l 10 0");
-	robotHead.attr({stroke: 'green', 'stroke-width': 7});  
+	//var robotHead = paper.path("M "+ robotHeadX+" "+ robotHeadY +"  l 5 0 l 0 -3.5 l 0 3.5 l 10 0 l 0 -3.5 l 0 3.5 l 5 0");
+	//robotHead.attr({stroke: 'green', 'stroke-width': 3});
+	
+	var robotHIR = paper.path("M "+ robotHIRX+" "+ robotHIRY +   "  l 4 0 l 0 -3.5 l 0 3.5 l 6 0 l 0 -3.5 l 0 3.5 l 4 0");
+	robotHIR.attr({stroke: 'green', 'stroke-width': 3});
+
+	var robotLIR = paper.path("M "+ robotLIRX+" "+ robotLIRY+"l 0 -4 l -3.5 0 l  3.5 0 l 0 -6 l -3.5 0 l 3.5 0 l 0 -4");
+	robotLIR.attr({stroke: 'green', 'stroke-width': 3});
+	
+	var robotRIR = paper.path("M "+ robotRIRX+" "+ robotRIRY+"l 0 4 l 3.5 0 l  -3.5 0 l 0 6 l 3.5 0 l -3.5 0 l 0 4");
+	robotRIR.attr({stroke: 'green', 'stroke-width': 3});        
 }
 
 
