@@ -133,7 +133,7 @@ function draw(){
      })
 	 .on( "mouseup", function() {
 		$(this).css( { "background-color": "green" } );
-		socket.emit('jazda', '10');
+		socket.emit('jazda', 'a');
 		console.log('niewcisniete Q');
 	});
 	$("#e").on( "mousedown", function() {
@@ -144,7 +144,7 @@ function draw(){
      })
 	 .on( "mouseup", function() {
 		$(this).css( { "background-color": "green" } );
-		socket.emit('jazda', '14');
+		socket.emit('jazda', 'b');
 		console.log('niewcisniete R');
 	});
 	
