@@ -73,7 +73,7 @@ function draw(){
 		circle.attr("stroke", "#fff");
 		draw();
 		
-		$("#dane").empty;
+		$("#dane").empty();
 		for (var i=0; i<dane.length; i++) {                    
             if (i%10 === 0) {
                 if(i>1) $("#dane").append("<br>");
