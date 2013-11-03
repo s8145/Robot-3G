@@ -84,31 +84,34 @@ socket.on('connection', function( client ) {
 		});
 		
 //------------------------------------------------------------------ 	
-		serialPort.on('data', function( dane ) {
-			//stanRobota = JSON.parse( dane );
-			//console.log('from arduino ' + stanRobota );			
-			//client.emit( 'testRobot',dane );
-			 //Nowy odbior danych Arduino
+               serialPort.on('data', function( dane ) {
+ //                       stanRobota = JSON.parse( dane );
+ //                       console.log('from arduino ' + stanRobota );                        
+ //                       client.emit( 'testRobot', dane );
+                        
+                        //Nowy odbi?r danych Arduino
                         var daneArduino = JSON.parse( dane );
-                        console.log('Mapa odebrana od arduino: ' + daneArduino.mapa);
+//                        console.log('Mapa odebrana od arduino: ' + daneArduino.mapa);
                         console.log('A teraz ladniej');
+                        var linia = '';
                         for (var i=0; i<daneArduino.mapa.length; i++) {
+                        
                                 if (i%10 === 0) {
-                                        console.log('\n');
+                                        console.log(linia);
+                                        linia = daneArduino.mapa.charAt(i);
+                                } else {
+                                        linia = linia + daneArduino.mapa.charAt(i);
                                 }
-                                console.log(daneArduino.mapa.charAt(i));
+                                
                         }
-		
-		
-		
-		
-		});
-		
-		serialPort.on('error', function (msg) {
-			console.log('Blad przy odbiorze danych z USB Arduino');
-		});
-		
-	});
+                                                
+                });
+                
+                serialPort.on('error', function (msg) {
+                        console.log('Blad przy odbiorze danych z USB Arduino');
+                });
+                
+        });
 
 });
 
