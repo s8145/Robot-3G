@@ -72,18 +72,21 @@ function draw(){
 		circle.attr("fill", "blue");
 		circle.attr("stroke", "#fff");
 		draw();
-		
+/*		
 		for (var i=0; i<dane.length; i++) {
                         
-            if (i === 10 || i ===20 || i ===30) {
+            if (i%10 === 0) {
                 $("#dane").append("\n"+ dane.charAt(i));
             } else {
                 $("#dane").append(dane.charAt(i));
             }
             
         }
-		
-		
+*/		
+		for (var i=0; i<dane.length; i++) {
+            $("#dane").append(dane.charAt(i));
+            
+        }
 	});
 
 	
