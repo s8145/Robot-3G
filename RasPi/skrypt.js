@@ -66,12 +66,25 @@ function draw(){
 		else {
 			$("#d3").css( { "background-color": "red" } );
 		}
-		$("#dane").html('<p>'+ dane + '</p>');
+		
 		paper.clear();	
 		var circle = paper.circle(robotHeadX+40, robotHeadY-dane*3, 8);
 		circle.attr("fill", "blue");
 		circle.attr("stroke", "#fff");
 		draw();
+		
+		var linia = '';
+		for (var i=0; i<dane.length; i++) {
+                        
+            if (i%10 === 0) {
+                $("#dane").html(linia);
+                linia = dane.charAt(i);
+            } else {
+                linia = linia + dane.charAt(i);
+            }
+                                
+        }
+		
 		
 	});
 
