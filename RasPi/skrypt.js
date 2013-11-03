@@ -81,7 +81,7 @@ function draw(){
            //     $("#dane").append(dane.charAt(i));
            // }
             if(i === 10){
-				$("#dane").append("\n");
+				$("#dane").append("\n"+ dane.charAt(i));
 			}else {
                 $("#dane").append(dane.charAt(i));
            }
