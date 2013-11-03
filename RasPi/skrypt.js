@@ -75,7 +75,7 @@ function draw(){
 		
 		for (var i=0; i<dane.length; i++) {
                         
-            if (i%10 === 0) {
+            if (i === 10 || i ===20 || i ===30) {
                 $("#dane").append("\n"+ dane.charAt(i));
             } else {
                 $("#dane").append(dane.charAt(i));
