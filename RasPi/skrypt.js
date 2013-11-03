@@ -80,7 +80,7 @@ function draw(){
            // } else {
            //     $("#dane").append(dane.charAt(i));
            // }
-            if(i ==10){
+            if(i === 10){
 				$("#dane").append("\n");
 			}else {
                 $("#dane").append(dane.charAt(i));
