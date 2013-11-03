@@ -75,16 +75,12 @@ function draw(){
 		
 		for (var i=0; i<dane.length; i++) {
                         
-            //if (i%10 === 0) {
-              //  $("#dane").append("\n");
-           // } else {
-           //     $("#dane").append(dane.charAt(i));
-           // }
-            if(i === 10){
-				$("#dane").append("\n"+ dane.charAt(i));
-			}else {
+            if (i%10 === 0) {
+                $("#dane").append("\n"+ dane.charAt(i));
+            } else {
                 $("#dane").append(dane.charAt(i));
-           }
+            }
+            
         }
 		
 		
