@@ -86,6 +86,7 @@ body {
 	position:			absolute;
 	background: black;
 	color: white;
+	font-style: Consolas;
 	left: 740px;
 	top: 15px;
 	border: 			2px solid black;

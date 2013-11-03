@@ -60,7 +60,7 @@ function draw(){
 	socket.on('testRobot', function( dane ) {
 		
 		console.log('from skrypt'+ dane );
-		if( dane== 1 ) {
+		if(dane) {
 			$("#d3").css( { "background-color": "green" } );
 		}
 		else {
@@ -73,14 +73,12 @@ function draw(){
 		circle.attr("stroke", "#fff");
 		draw();
 		
-		var linia = '';
 		for (var i=0; i<dane.length; i++) {
                         
             if (i%10 === 0) {
-                $("#dane").append("\n"+linia);
-                linia = dane.charAt(i);
+                $("#dane").append("\n");
             } else {
-                linia = linia + dane.charAt(i);
+                $("#dane").append(dane.charAt(i));
             }
                                 
         }
