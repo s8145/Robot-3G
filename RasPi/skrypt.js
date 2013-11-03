@@ -77,7 +77,7 @@ function draw(){
 		for (var i=0; i<dane.length; i++) {
                         
             if (i%10 === 0) {
-                $("#dane").html(linia);
+                $("#dane").append(linia);
                 linia = dane.charAt(i);
             } else {
                 linia = linia + dane.charAt(i);
