@@ -68,13 +68,13 @@ function draw(){
 		}
 		
 		paper.clear();	
-		var circle = paper.circle(robotHeadX+40, robotHeadY-dane*3, 8);
-		circle.attr("fill", "blue");
-		circle.attr("stroke", "#fff");
+		var block = paper.rect(0, 0, 20, 50, 2);
+		block.attr("fill", "blue");
+		block.attr("stroke", "#fff");
 		draw();
 		
-		$("#dane").empty();
-		for (var i=0; i<dane.length; i++) {                    
+		$("#dane").empty();//czyszczenie okienka komunikatow
+		for (var i=0; i<dane.length; i++) {//tablica w okienku komunikatow                    
             if (i%10 === 0) {
                 if(i>1) $("#dane").append("<br>");
 				$("#dane").append(dane.charAt(i));
@@ -82,6 +82,10 @@ function draw(){
                 $("#dane").append(dane.charAt(i));
             }
         }
+		
+		
+		
+		
 		
 		
 	});
