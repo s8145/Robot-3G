@@ -67,11 +67,7 @@ function draw(){
 			$("#d3").css( { "background-color": "red" } );
 		}
 		
-		paper.clear();	
-		var block = paper.rect(0, 0, 20, 50, 2);
-		block.attr("fill", "blue");
-		block.attr("stroke", "#fff");
-		draw();
+		
 		
 		$("#dane").empty();//czyszczenie okienka komunikatow
 		for (var i=0; i<dane.length; i++) {//tablica w okienku komunikatow                    
@@ -262,5 +258,12 @@ function draw(){
         });
 	
 //---------------------------------------------------------------------
-	
+
+function drawBlock(){	
+	paper.clear();	
+	var block = paper.rect(0, 0, 40, 40, 2);
+	block.attr("fill", "blue");
+	block.attr("stroke", "#fff");
+	draw();
+}	
 });
