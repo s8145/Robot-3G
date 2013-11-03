@@ -85,11 +85,11 @@ body {
 #dane{
 	position:			absolute;
 	background: black;
-	color: white;
+	color: grey;
 	font-size:70%;
 	left: 740px;
 	top: 15px;
-	border: 			2px solid white;
+	border: 			2px solid black;
 	width:				180px;
 	height:				200px;
 
