@@ -81,8 +81,8 @@ function draw(){
 		
 		
 		
-		
-		
+		drawBlock();
+		draw();
 		
 	});
 
@@ -264,6 +264,6 @@ function drawBlock(){
 	var block = paper.rect(0, 0, 40, 40, 2);
 	block.attr("fill", "blue");
 	block.attr("stroke", "#fff");
-	draw();
+	
 }	
 });
