@@ -86,10 +86,10 @@ body {
 	position:			absolute;
 	background: black;
 	color: white;
-	font-style: "Consolas";
+	font-size:100%;
 	left: 740px;
 	top: 15px;
-	border: 			2px solid black;
+	border: 			2px solid white;
 	width:				200px;
 	height:				200px;
 
