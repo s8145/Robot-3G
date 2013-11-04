@@ -8,7 +8,7 @@ $(document).ready(function () {
 	var robotX = 301, robotY = 301;
 	var robotHeadX = 301+20, robotHeadY = 301-7;
 	var paper = Raphael(mapa, rozmiar, rozmiar);
-function draw(){	
+
 	var liniePoziom = paper.path("M 0 0 l "+ rozmiar +" 0 ");
 	var liniePion = paper.path("M 0 0 l 0 "+ rozmiar);  
 	for(var i = 0; i < 1000; i+=20) {
@@ -22,7 +22,6 @@ function draw(){
 
 	var robotHead = paper.path("M "+ robotHeadX+" "+ robotHeadY +"  l 10 0 l 0 -7 l 0 7 l 20 0 l 0 -7 l 0 7 l 10 0");
 	robotHead.attr({stroke: 'green', 'stroke-width': 7});  
-}
 
 
 //--------------------------------------------------------------- obs³uga odpowiedzi serwera
@@ -45,12 +44,10 @@ function draw(){
 		else {
 			$("#d3").css( { "background-color": "red" } );
 		}
-		$(#dane).html('<p>servo_1 detect: '+ dane + 'cm</p>');
-		paper.clear();	
-		var circle = paper.circle(robotHeadX+40, robotHeadY-dane*3, 8);
+			
+		var = circle = paper.circle(robotHeadX+40, robotHeadY-dane, 8);
 		circle.attr("fill", "blue");
 		circle.attr("stroke", "#fff");
-		draw();
 		
 	});
 

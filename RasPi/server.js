@@ -3,11 +3,11 @@ var http = require('http'),
     fs = require('fs'),
     path = require('path'),
     io = require('socket.io'),
-	serialport = require("serialport");
+        serialport = require("serialport");
 
 //------------------------------------------------------- Tworzenie serwera
 var server = http.createServer(function (req, res) { 
-	'use strict';
+        'use strict';
     var filePath = '.' + req.url,
         contentType = 'text/html',
         extName;
@@ -46,7 +46,7 @@ var server = http.createServer(function (req, res) {
     });
 });
 
-//------------------------------------------------------- Obs³uga USB
+//------------------------------------------------------- ObsÂ³uga USB
 
 var SerialPort = serialport.SerialPort;
 var arduinoSerialPort = '/dev/ttyACM0';
@@ -55,37 +55,37 @@ parser: serialport.parsers.readline("\n")
 });
 
 var socket = io.listen(server);
-serialPort.on('open', function() {		
+serialPort.on('open', function() {                
 socket.on('connection', function( client ) {
-							// Wy³¹czone na czas braku portu
-		console.log('open - port USB otwarty');
-	
-		
-		
-	
+                                                        // WyÂ³Â¹czone na czas braku portu
+                console.log('open - port USB otwarty');
+        
+                
+                
+        
 //------------------------------------------------------- Sokety
 
 
     'use strict';
-	
-	
-		client.on('message', function( message ) {					
-			console.log( message );
-		});
-		
-		client.on('jazda', function( dane ) {
+        
+        
+                client.on('message', function( message ) {                                        
+                        console.log( message );
+                });
+                
+                client.on('jazda', function( dane ) {
 
-			console.log( dane );
-			//console.log( stanRobota );
-			client.emit( 'testServer', "Test serwer odpowiada");
-			client.emit( 'testJSON', JSON.stringify( daneMapy.test ) );
-			serialPort.write( dane  ); 			
+                        console.log( dane );
+                        //console.log( stanRobota );
+                        client.emit( 'testServer', "Test serwer odpowiada");
+                        client.emit( 'testJSON', JSON.stringify( daneMapy.test ) );
+                        serialPort.write( dane  );                         
 
-		});
-		
-//------------------------------------------------------------------ 	
+                });
+                
+//------------------------------------------------------------------         
                serialPort.on('data', function( dane ) {
-			   
+                           
                         var daneArduino = JSON.parse( dane );
 //                        console.log('Mapa odebrana od arduino: ' + daneArduino.mapa);
                         client.emit( 'testRobot', daneArduino.mapa);
@@ -114,7 +114,7 @@ socket.on('connection', function( client ) {
 //------------------------------------------------------- Zmienne
 
 var daneMapy = {
-	test: "Test JSON utworzony na serwerze"
+        test: "Test JSON utworzony na serwerze"
 };
 
 var stanRobota;
